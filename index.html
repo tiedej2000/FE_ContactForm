@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="contact formular">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Contact form</title>
+
+</head>
+<body>
+  <main>
+    <div class="modal">
+      <header>
+        <img src="./assets/images/icon-success-check.svg" alt="">
+        <h3>Message Sent!</h3>
+      </header>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+    <section class="contact-form">
+      <h2>Contact Us</h2>
+        <form id="form">
+          <!-- name -->
+          <fieldset class="personal-info">
+            <legend>Personal Information</legend>
+            <div class="name">
+              <div class="input-group">
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first-name" aria-invalid="true" aria-describedby="error-name" >
+                <span id="error-name" class="error-msg">This field is required</span>
+              </div>
+              <div class="input-group">
+                <label for="last-name">Last Name *</label>
+                <input type="text" name="last-name" id="last-name" aria-invalid="true" aria-describedby="error-lname" >
+                <span id="error-lname" class="error-msg">This field is required</span>
+              </div>
+            </div>
+            <div class="email">
+              <div class="input-group">
+                <label for="email">Email Adress *</label>
+                <input type="text" name="email" id="email" aria-invalid="true" aria-describedby="error-email">
+                <span id="error-email" class="error-msg">Please enter a valid email adress</span>
+              </div>
+            </div>
+          </fieldset>
+          <!-- query type -->
+          <fieldset class="query-type">
+            <legend>Query Type</legend>
+            <label for="query">Query Type *</label>
+            <div class="query">
+              <div class="general-query">
+                <input type="radio" name="query-type" id="general-query" aria-invalid="true" aria-describedby="error-query" >
+                <label for="general-query">General Enquiry</label>
+              </div>
+              <div class="support-query">
+                <input type="radio" name="query-type" id="support-query" aria-invalid="true" aria-describedby="error-query" >
+                <label for="support-query">Support Enquiry</label>
+              </div>
+            </div>
+            <span id="error-query" class="error-msg">Please select a query type</span>
+          </fieldset>
+          <!-- message -->
+           <fieldset>
+            <legend>Message input area</legend>
+            <div class="message">
+              <label for="message">Message *</label>
+              <textarea name="message" id="message" aria-invalid="true" aria-describedby="error-message"></textarea>
+            </div>
+            <span id="error-message" class="error-msg">This field is required</span>
+           </fieldset>
+           <!-- consent -->
+            <fieldset>
+              <legend>Consent</legend>
+              <div class="consent">
+                <input type="checkbox" name="consent" id="consent" aria-invalid="true" aria-describedby="error-consent" >
+                <label for="consent"> I consent to being contacted by the team *</label>
+              </div>
+              <span id="error-consent" class="error-msg">To submit this form, please consent to being contacted</span>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
